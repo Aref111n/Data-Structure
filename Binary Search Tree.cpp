@@ -42,16 +42,16 @@ void preorder(bst *root) {
 		return ;
 
 	cout << root->data << " " ;
-	inorder(root->left) ;
-	inorder(root->right) ;
+	preorder(root->left) ;
+	preorder(root->right) ;
 }
 
 void postorder(bst *root) {
 	if(root == NULL)
 		return ;
 
-	inorder(root->left) ;
-	inorder(root->right) ;
+	postorder(root->left) ;
+	postorder(root->right) ;
 	cout << root->data << " " ;
 }
 
