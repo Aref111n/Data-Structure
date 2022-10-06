@@ -8,7 +8,7 @@ ll a[1001] ;
 void Merge(ll l, ll m, ll r) {
     ll i = l ;
     ll j = m+1 ;
-    ll k = l ;
+    ll k = 0 ;
     ll b[r-l+6] ;
 
     while(i<=m && j<=r) {
@@ -23,9 +23,11 @@ void Merge(ll l, ll m, ll r) {
     while(j<=r)
         b[k++] = a[j++] ;
 
+    ll K=k ;
+
     //cout << l << " " << r << endl ;
-    for(int k=l; k<=r; k++) {
-        a[k] = b[k] ;
+    for(int k=0; k<K; k++) {
+        a[k+l] = b[k] ;
         //cout << a[k] << " " ;
     }
     //cout << endl ;
